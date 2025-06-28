@@ -1,5 +1,9 @@
 using System;
 
+/*I showed creatity by adding a level up system that levels the user up every time they earn 150 points. I also made it so that when the user chooses
+to record an event that only the goals that havn't been finished show up. And I handle many exceptions so there aren't as many errors. That being said
+the file name need to be exact or there will be an error. */
+
 class Program
 {
     static List<Goal> _Goals = new List<Goal>();
@@ -113,7 +117,7 @@ class Program
                 {
                     Console.WriteLine("Unexpected input");
                 }
-                            
+
                 Console.WriteLine($"You now have {_Points} and are at level {_Level}.");
                 break;
             case 6:
@@ -124,7 +128,7 @@ class Program
                 break;
         }
 
-        DisplayStats();    
+        DisplayStats();
     }
 
     public static void DisplayStats()
