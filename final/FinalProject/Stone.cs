@@ -13,8 +13,8 @@ public class Stone : Tile
 
     }
 
-    public override void Draw(float dt)
+    public override void Draw()
     {
-
+        Raylib.DrawRectangleRec(_rect, _color);
     }
 }

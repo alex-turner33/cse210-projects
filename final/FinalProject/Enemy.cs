@@ -8,22 +8,12 @@ public abstract class Enemy : Entity
 
     }
 
-    public override void Update(float dt)
-    {
-
-    }
-
     public override void Draw()
     {
 
     }
 
-    public override void Move(float dt)
-    {
-
-    }
-
-    public override void Collision()
+    public override void Move(float dt, List<Tile> tiles)
     {
 
     }
