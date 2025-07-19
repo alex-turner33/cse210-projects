@@ -2,12 +2,16 @@ using Raylib_cs;
 using RayRectangle = Raylib_cs.Rectangle;
 public abstract class Tile
 {
-    public RayRectangle _rect;
+    protected RayRectangle _rect;
     protected Color _color;
-    public Tile(int x, int y, int width, int height, Color color)
+    protected string _type;
+
+    protected bool _isTriggered = false;
+    public Tile(int x, int y, int width, int height, Color color, string type)
     {
         _rect = new RayRectangle(x, y, width, height);
         _color = color;
+        _type = type;
     }
 
     public abstract void Update(float dt);
@@ -17,5 +21,20 @@ public abstract class Tile
     public RayRectangle GetRect()
     {
         return _rect;
+    }
+
+    public string GetType()
+    {
+        return _type;
+    }
+
+    public void SetTrigger(bool hasIt)
+    {
+        _isTriggered = hasIt;
+    }
+
+    public bool GetTrigger()
+    {
+        return _isTriggered;
     }
 }

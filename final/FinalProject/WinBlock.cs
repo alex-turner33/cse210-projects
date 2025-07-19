@@ -1,9 +1,9 @@
 using Raylib_cs;
 using RayRectangle = Raylib_cs.Rectangle;
 
-public class Stone : Tile
+public class WinBlock : Tile
 {
-    public Stone(int x, int y, int width, int height, Color color, string type) : base(x, y, width, height, color, type)
+    public WinBlock(int x, int y, int width, int height, Color color, string type) : base(x, y, width, height, color, type)
     {
 
     }

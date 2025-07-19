@@ -1,26 +1,25 @@
+using System;
+using System.Numerics;
+using Raylib_cs;
+using RayRectangle = Raylib_cs.Rectangle;
 public abstract class Weapon
 {
-    protected int _x;
-    protected int _y;
-    protected int _width;
-    protected int _height;
+    protected RayRectangle _rect;
+
+    protected bool _isFacingRight = true;
     protected int _damage;
-    protected int _hp;
-    public Weapon(int x, int y, int width, int height, int damage, int hp)
+    public Weapon(float x, float y, int width, int height, int damage)
     {
-        _x = x;
-        _y = y;
-        _width = width;
-        _height = height;
+        _rect = new RayRectangle(x, y, width, height);
         _damage = damage;
-        _hp = hp;
+    }
+
+    public RayRectangle GetRect()
+    {
+        return _rect;
     }
 
     public abstract void Update(float dt);
 
-    public abstract void Draw();
-
     public abstract void Move(float dt);
-
-    public abstract void Destroy();
 }
